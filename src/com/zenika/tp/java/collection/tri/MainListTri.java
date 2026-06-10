@@ -34,5 +34,14 @@ public class MainListTri {
         List<Person> filtredPersons = personList.stream().sorted().filter(e -> e.getFirstName().length() >= 3).collect(Collectors.toList());
 
         System.out.printf("List person after being sorted an filtred: %s\n", filtredPersons.toString());
+
+
+        // Autoboxing
+        List<Integer> numbers = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+        numbers.add(16);
+        numbers.add(Integer.valueOf(17));
+
+        System.out.printf("Numbers after autoboxing: %s", numbers.toString());
     }
 }
