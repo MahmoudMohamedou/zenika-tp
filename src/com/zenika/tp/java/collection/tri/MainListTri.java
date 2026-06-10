@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 public class MainListTri {
     public static void main(String[] args) {
-        List<Person> personList = new ArrayList<Person>(List.of(new Person("said", "salem"), new Person("lu", "salem"),  new Person("saba", "yahya")));
+        List<Person> personList = new ArrayList(List.of(new Person("said", "salem"), new Person("lu", "salem"), new Person("saba", "yahya")));
 
         System.out.printf("[Comparator] Before sorting: %s\n", personList.toString());
         // Sort list of persons using comparator
@@ -17,7 +17,7 @@ public class MainListTri {
 
         // Sort using Comparable
 
-        List<Person> personList2 = new ArrayList<Person>(List.of(new Person("said", "salem"), new Person("amin", "yahya")));
+        List<Person> personList2 = new ArrayList(List.of(new Person("said", "salem"), new Person("amin", "yahya")));
 
 
         System.out.printf("[Comparable] Before sorting: %s\n", personList2.toString());

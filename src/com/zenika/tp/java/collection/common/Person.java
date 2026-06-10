@@ -2,16 +2,7 @@ package com.zenika.tp.java.collection.common;
 
 import java.util.Objects;
 
-public class Person implements Comparable<Person> {
-    @Override
-    public int compareTo(Person o) {
-        if (this.getFirstName().equals(o.getFirstName()) && this.getLastName().equals(o.getLastName()))
-            return 0;
-
-        if (this.getFirstName().equals(o.getFirstName())) this.getLastName().compareTo(o.getLastName());
-
-        return this.getFirstName().compareTo(o.getFirstName());
-    }
+public class Person<T extends Person> implements Comparable<T> {
 
     private String firstName;
     private String lastName;
@@ -42,6 +33,15 @@ public class Person implements Comparable<Person> {
         return this.firstName.charAt(0);
     }
 
+    @Override
+    public int compareTo(T o) {
+        if (this.getFirstName().equals(o.getFirstName()) && this.getLastName().equals(o.getLastName()))
+            return 0;
+
+        if (this.getFirstName().equals(o.getFirstName())) this.getLastName().compareTo(o.getLastName());
+
+        return this.getFirstName().compareTo(o.getFirstName());
+    }
 
 
     @Override
